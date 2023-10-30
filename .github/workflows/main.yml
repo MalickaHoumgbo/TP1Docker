@@ -24,6 +24,6 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        working-directory: "backend_api/simple-api-student-main"
-        run: mvn clean install
+        working-directory: TP1 Docker/TP1_Docker_Backend/simple-api
+        run: mvn clean verify
              
