@@ -6,8 +6,6 @@ on:
       - main
       - develop
               
-  pull_request:
-
 jobs:
   test-backend: 
     runs-on: ubuntu-22.04
