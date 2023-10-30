@@ -2,7 +2,9 @@ name: CI devops 2023
 on:
   #to begin you want to launch this job in main and develop
   push:
-    branches: -main
+    branches: 
+      - main
+      - develop
               
   pull_request:
 
@@ -22,5 +24,6 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
+        
         run: mvn clean install
              
