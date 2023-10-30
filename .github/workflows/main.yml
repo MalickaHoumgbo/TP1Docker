@@ -1,4 +1,5 @@
 name: CI devops 2023
+
 on:
   #to begin you want to launch this job in main and develop
   push:
@@ -22,7 +23,7 @@ jobs:
 
   
      #finally build your app with the latest command
-     - name: Build and test with Maven
+      - name: Build and test with Maven
         working-directory: TP1 Docker/TP1_Docker_Backend/simple-api
         run: mvn clean verify
 
