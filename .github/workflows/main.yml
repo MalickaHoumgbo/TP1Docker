@@ -22,17 +22,9 @@ jobs:
           java-version : 17
           distribution : 'adopt'
 
-      - name: Build image and push backend
-        uses: docker/build-push-action@v3
-        with:
-       # relative path to the place where source code with Dockerfile is located
-          context: ./simple-api
-       # Note: tags has to be all lower-case
-         tags:  ${{secrets.DOCKERHUB_USERNAME}}/tp-devops-simple-api:latest
-
-
+  
      #finally build your app with the latest command
-      - name: Build and test with Maven
+     - name: Build and test with Maven
         working-directory: TP1 Docker/TP1_Docker_Backend/simple-api
         run: mvn clean verify
 
